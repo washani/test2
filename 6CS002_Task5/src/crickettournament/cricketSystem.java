@@ -1,11 +1,12 @@
 package crickettournament;
 
+import crickettournament.cricketSystem;
+
 public class cricketSystem implements Comparable<cricketSystem> {
 
 	private int teamNo;
 	private String teamName;
 	private int nfPlayer;
-	
 	private int nfTestMatched;
 	private int wonTestMatched;
 	private int lostTest;
@@ -22,17 +23,21 @@ public class cricketSystem implements Comparable<cricketSystem> {
 	
 	private int nfTwentyMatched;
 	private int wonTwentyMatched;
-	private int lostTwenty;
+	private int lostTwenty;    
 	private int drawTwenty;
 	private int totalTwentyPoints;
 	private int totalTwentyWickets;
 	
 
-	public cricketSystem(int teamNo, String teamName, int nfPlayer, int nfTestMatched, int wonTestMatched, int lostTest,
-			int drawTest, int totalTestPoints, int totalTestWickets, int nfOnedayMatched, int wonOnedayMatched, int lostOneday, int drawOneay, int totalOnedayPoints, 
-			int totalOnedayWickets, int nfTwentyMatched, int wonTwentyMatched, int lostTwenty, int drawTwenty, int totalTwentyPoints, int totalTwentyWickets) {
-
-	}
+	public cricketSystem(int teamNo, String teamName,int nfPlayer, int nfTestMatched, int wonTestMatched, int totalTestPoints ) {
+		this.teamNo = teamNo;
+		this.teamName = teamName;
+		this.nfPlayer = nfPlayer;
+		this.nfTestMatched = nfTestMatched;
+		this.wonTestMatched = wonTestMatched;
+		this.totalTestPoints = totalTestPoints;
+		
+}
 
 
 	
@@ -246,15 +251,20 @@ public class cricketSystem implements Comparable<cricketSystem> {
 		this.totalTwentyWickets = totalTwentyWickets;
 	}
 	public String toString() {
-		return teamName;
-		/*return String.format("%3d%20s%10d%10d%10d", teamNo, teamName, nfPlayer,
-				totalTestPoints, totalOnedayPoints);*/
+		return teamNo+"  "+teamName+"       "+nfPlayer+"         "+nfTestMatched + "   " +wonTestMatched+"  "+totalTestPoints;
 		}
 	@Override
 	public int compareTo(cricketSystem arg) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+
+
+
+
+
+
 
 
 }
